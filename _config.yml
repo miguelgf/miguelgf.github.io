@@ -29,3 +29,4 @@ theme: minima
 # Config
 timezone: Europe/Madrid
 permalink: /:year/:month/:title
+keep_files: ['assets']
