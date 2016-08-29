@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Can''t create table (errno: 150) MySQL'
+date: '2014-01-16T18:03:00.000+01:00'
+author: Miguel González
+tags:
+- mysql
+modified_time: '2014-01-16T18:03:01.517+01:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-4117530911238560006
+blogger_orig_url: http://www.miguelg.com/2014/01/cant-create-table-errno-150-mysql.html
+---
+
+Este error de MySQL aparece en las tablas InnoDB al crear referencias de llaves externas que no son del mismo tipo.<br /><br /><b>Solución</b>: Usar el mismo tipo de campo en la tabla origen y el el campo que referencia la tabla.

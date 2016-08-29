@@ -1,0 +1,14 @@
+---
+layout: post
+title: 'Error: The command line launcher is outdated en PHPStorm'
+date: '2016-05-23T10:47:00.003+02:00'
+author: Miguel González
+tags:
+- ide
+- phpstorm
+modified_time: '2016-05-23T10:47:42.312+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-7556453862419410687
+blogger_orig_url: http://www.miguelg.com/2016/05/error-command-line-launcher-is-outdated.html
+---
+
+Si trabajando con PHPStorm, especialmente con las últimas versiones actualizadas desde una versión anterior, es posible que os encontréis con el siguiente problema si tenéis configurado pstorm en la línea de comandos para merges, rebases y otras tareas.<br /><br /><span style="font-family: Courier New, Courier, monospace;">Unauthorized Operation: The command line launcher is outdated. Please refresh it (via Tools | Create Command-line Launcher).</span><br /><br />En este caso hay que generar de nuevo el archivo pstorm (en linux /usr/bin/pstorm) con la nueva versión de PHPStorm, simplemente acceder a Tools &gt; Create Command-Line Launcher... &nbsp;y aceptar los valores por defecto.

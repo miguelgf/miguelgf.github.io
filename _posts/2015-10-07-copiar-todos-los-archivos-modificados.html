@@ -1,0 +1,14 @@
+---
+layout: post
+title: Copiar todos los archivos modificados de la rama actual en Git
+date: '2015-10-07T09:36:00.001+02:00'
+author: Miguel González
+tags:
+- programación
+- git
+modified_time: '2015-10-07T09:36:20.866+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-8754341740055604212
+blogger_orig_url: http://www.miguelg.com/2015/10/copiar-todos-los-archivos-modificados.html
+---
+
+Cuando se trabaja con varios proyectos en github, cada uno con varias ramas es normal querer extraer los archivos para hacer alguna prueba en el servidor de pruebas o simplemente revisar los archivos aparte que han sido modificados.<br /><br />En git se pueden ver los archivos por separados y en la interfaz de github también por cada commit o pull request, pero si se trata de copiar los archivos en el directorio ya necesitamos otras herramientas.<br /><br />Yo hago uso de estos dos comandos en consola para manejarme con archivos y ramas en git:<br /><br />Copiar todos los archivos del último commit en la rama en la que se está:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">for /f "usebackq tokens=*" %A in (`git diff-tree -r --no-commit-id --name-only --diff-filter=ACMRT HEAD~1 HEAD`) do echo FA|xcopy "%~fA" "C:\git_changed_files\%A"</span><br /><br /><br /> Estando en la rama a comparar, copia todos los archivos modificados en la rama actual respecto a master:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">for /f "usebackq tokens=*" %A in (`git diff --name-only master $(git rev-parse --abbrev-ref HEAD)`) do echo FA|xcopy "%~fA" "C:\git_changed_files\%A"</span>

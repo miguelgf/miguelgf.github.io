@@ -1,0 +1,16 @@
+---
+layout: post
+title: INSERT IGNORE de MySQL en CodeIgniter
+date: '2013-11-07T01:20:00.002+01:00'
+author: Miguel González
+tags:
+- active record
+- programación
+- codeigniter
+- php
+modified_time: '2013-11-07T01:20:34.473+01:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-7316361886556689175
+blogger_orig_url: http://www.miguelg.com/2013/11/insert-ignore-de-mysql-en-codeigniter.html
+---
+
+En caso de que se esté usando el framework CodeIgniter y para gestionar la base de datos se utilice Active Record, puede ser que eches de menos la opción de insertar con la opción IGNORE específica de MySQL.<br /><br />CodeIgniter y Active Record, en su propósito de abstraerse del sistema gestor de base de datos no soporta esta pecularidad única de MySQL, sin embargo con un pequeño truco es posible realizarlo.<br /><br />Para ello debemos obtener la cadena resultante del query del insert y reemplazar el INSERT INTO por un INSERT REPLACE INTO, de la siguiente manera:<br /><br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">$cadena_query = $this-&gt;db-&gt;insert_string('mi_tabla', $campos_tabla);<br />$cadena_query = str_replace('INSERT INTO', 'INSERT IGNORE INTO', $cadena_query);<br />$this-&gt;db-&gt;query($cadena_query);</span>

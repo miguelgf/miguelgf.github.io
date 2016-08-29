@@ -1,0 +1,14 @@
+---
+layout: post
+title: Underflow en enteros sin signo en MySQL 5 y 5.1
+date: '2013-01-03T21:16:00.003+01:00'
+author: Miguel González
+tags:
+- mysql
+- programación
+modified_time: '2013-01-03T21:16:56.647+01:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-4477201935509292562
+blogger_orig_url: http://www.miguelg.com/2013/01/underflow-en-enteros-sin-signo-en-mysql.html
+---
+
+Si actualizas a la versión 5 ó 5.1 de MySQL tienes que tener cuidado con los underflow en los campos integer unsigned que puedas tener, ya que en caso de realizar una operación aritmética que produzca un número negativo, no se quedará en 0 sino que hará underflow.<br /><br /><pre class="note">mysql&gt; SELECT CAST(0 AS UNSIGNED) - 1; <br />+-------------------------+<br />| CAST(0 AS UNSIGNED) - 1 |<br />+-------------------------+<br />|    18446744073709551615 |<br />+-------------------------+</pre>&nbsp; <br />Para solucionar esto hay que establecer el SQL_MODE a NO_UNSIGNED_SUBTRATION y asi evitar este comportamiento y dejarlo en 0 en caso de restar más de la cuenta. <br /><br /><pre class="note">mysql&gt; SET SQL_MODE = 'NO_UNSIGNED_SUBTRACTION'; <br />mysql&gt; SELECT CAST(0 AS UNSIGNED) - 1; <br />+-------------------------+<br />| CAST(0 AS UNSIGNED) - 1 |<br />+-------------------------+<br />|                      -1 |<br />+-------------------------+</pre>

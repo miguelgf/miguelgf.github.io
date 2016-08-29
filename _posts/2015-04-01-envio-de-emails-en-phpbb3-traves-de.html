@@ -1,0 +1,16 @@
+---
+layout: post
+title: Envio de emails en phpBB3 a través de Amazon SES
+date: '2015-04-01T16:49:00.001+02:00'
+author: Miguel González
+tags:
+- ses
+- amazon
+- phpbb
+modified_time: '2015-04-01T16:49:50.955+02:00'
+thumbnail: http://1.bp.blogspot.com/-83OGWEeyLWg/VRwE5rPXHUI/AAAAAAAADMg/uyG3WTedEAk/s72-c/amazon-ses-smtp.JPG
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-8932759782524136059
+blogger_orig_url: http://www.miguelg.com/2015/04/envio-de-emails-en-phpbb3-traves-de.html
+---
+
+Para configurar un foro phpBB3 para enviar emails a través de Amazon SES no hace falta tocar ni una línea de código, puede hacerse todo desde la administración.<br /><br />En el panel de administración, en la sección General &gt; Configuración Cliente &gt; Configuración de email, en la parte inferior hay una opción para activar el envio a través de SMTP.<br /><br />En los datos hay que introducir los facilitados por los credenciales IMA generados en el propio panel&nbsp; de Amazon AWS console, el Método de autentificación para SMTP debe ser PLAIN y es importante añadir el protocolo TLS al principio del nombre del servidor, quedando los datos de esta manera:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-83OGWEeyLWg/VRwE5rPXHUI/AAAAAAAADMg/uyG3WTedEAk/s1600/amazon-ses-smtp.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-83OGWEeyLWg/VRwE5rPXHUI/AAAAAAAADMg/uyG3WTedEAk/s1600/amazon-ses-smtp.JPG" height="165" width="400" /></a></div><br /><br /><b>Caso de error: </b><br />Si usáis la configuración predeterminada de Amazon el puerto que se usa es el 587 y no funcionará al no usar STARTTLS, por lo que hay que usar un Wrapper de TLS tal y como indica la documentación de Amazón (http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html), el error que encontraréis si mantenéis el puerto es el siguiente:<br /><br />Could not connect to smtp host : 0 : <br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">Errno 2: fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:<br />error:1408F10B:SSL  routines:SSL3_GET_RECORD:wrong version number at  [ROOT]/includes/functions_messenger.php line 1030&lt;br /&gt;<br />Errno 2: fsockopen(): Failed to enable crypto at [ROOT]/includes/functions_messenger.php line 1030&lt;br /&gt;<br />Errno  2: fsockopen(): unable to connect to  tls://email-smtp.eu-west-1.amazonaws.com:587 (Unknown error) at  [ROOT]/includes/functions_messenger.php line 1030</span><br /><br /><b>Solución: Usar el puerto 465 para la comunicación SMTP</b><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">&nbsp;</span>

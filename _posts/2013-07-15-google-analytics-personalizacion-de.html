@@ -1,0 +1,17 @@
+---
+layout: post
+title: 'Google analytics: Personalización de búsquedas en el sitio con URLs amigables'
+date: '2013-07-15T19:42:00.000+02:00'
+author: Miguel González
+tags:
+- analytics
+- webmasters
+- google
+- marketing
+modified_time: '2013-07-15T19:42:25.241+02:00'
+thumbnail: http://2.bp.blogspot.com/-Cl0ZeKVWFck/UeQzwUmeL8I/AAAAAAAAAbk/GKipL3A3hC8/s72-c/busqueda_sitio.JPG
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-6363389228634822345
+blogger_orig_url: http://www.miguelg.com/2013/07/google-analytics-personalizacion-de.html
+---
+
+En Google Analytics, dentro del menú de Contenido &gt; Búsquedas en el sitio se pueden ver las búsquedas que realizan los usuarios dentro de tu sitio, siempre que Google las detecte como tal. Ésto normalmente sucede cuando tienes la búsqueda parametizada, lo que significa que tenemos un parámetro en la URL tal que asi:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">buscador.php?busqueda=miguelg</span><br /><br />Si detecta o le indicamos el parámetro "búsqueda" como la búsqueda del sitio podremos saber en Google Analytics que en nuestra web buscan "miguelg".<br /><br />¿Qué ocurre cuando tenemos URLs de búsqueda amigables? En el ejemplo anterior podriamos tener<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">/busqueda/miguelg</span><br /><br />y Analytics no lo detectaría como tal.<br /><br /><span style="font-size: large;">Usando filtros para modificar valor de los cambios</span><br /><br />Podemos crear un filtro a nuestro perfil para indicar lo que sería el parámetro de búsqueda.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-Cl0ZeKVWFck/UeQzwUmeL8I/AAAAAAAAAbk/GKipL3A3hC8/s1600/busqueda_sitio.JPG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="197" src="http://2.bp.blogspot.com/-Cl0ZeKVWFck/UeQzwUmeL8I/AAAAAAAAAbk/GKipL3A3hC8/s400/busqueda_sitio.JPG" width="400" /></a></div><br />Debemos ir a nuestro <b>perfil </b>que queramos modificar, acceder a la pestaña <b>Filtros </b>y <b>Crear un nuevo filtro.</b> Aparte de insertar un nombre de filtro reconocible. tenemos que seleccionar <b>Filtro avanzado</b> en tipo de filtro y de las opciones que se despliegan seleccionar la última: <b>Opciones Avanzadas</b>.<br /><br />Extraemos del campo A (URI de la web) el extracto que pertenece a la búsqueda y enviamos esos resultados al campo Término de búsqueda.

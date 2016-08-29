@@ -1,0 +1,13 @@
+---
+layout: post
+title: Encontrar archivos recursivamente con Get-ChildItem en PowerShell
+date: '2014-02-11T18:39:00.002+01:00'
+author: Miguel González
+tags:
+- powershell
+modified_time: '2014-02-11T18:39:21.982+01:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-6762255734750006148
+blogger_orig_url: http://www.miguelg.com/2014/02/encontrar-archivos-recursivamente-con.html
+---
+
+Para crear un proceso que se ejecute en múltiples archivos puedes usar Get-ChildItem para obtener estos archivos de la siguiente manera:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">Get-ChildItem *.php</span><br /><br />Pero solo recorrerá el directorio actual. Si necesitas que recursivamente vaya por todos los directorios debes ejecutarlo de la siguiente manera:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">Get-ChildItem -path ./ -recurse -Include *.php</span>

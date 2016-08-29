@@ -1,0 +1,15 @@
+---
+layout: post
+title: Eventos sin interacción en Google Analytics
+date: '2014-05-09T19:41:00.005+02:00'
+author: Miguel González
+tags:
+- analytics
+- webmasters
+- google
+modified_time: '2014-05-09T19:41:57.774+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-1908760059255481636
+blogger_orig_url: http://www.miguelg.com/2014/05/eventos-sin-interaccion-en-google.html
+---
+
+Cualquier usuario medio de Google Analytics debe conocer el sistema de eventos, donde se envía información relativa a las acciones que realiza el usuario en la web, como descargas de archivos, plays en vídeo, etc.<br /><br />Una de las cosas que hacían estos eventos por defecto era afectar al rebote. De manera que si un evento era lanzado el usuario no contaba como rebote incluso si después no veía ninguna página más. En la mayoría de los casos eso es lo correcto, puesto que si el usuario interactura con la página no es de recibo catalogarlo como usuario rebotado.<br /><br />De todos modos, hay un nuevo parámetro que puedes enviar a Google Analytics indicando cuando el evento es interactivo o no, para determinar si el usuario ha tomado acción o no. Por ejemplo un vídeo con auto-play que lanza el evento de Play de vídeo podría no contarse como iteracción del usuario, pues él no ha hecho nada y quizás si haya rebotado de la página.<br /><br />En el código de Google Analytics normal:<br /><br /><pre><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><code>_gaq.push(['category', 'action', 'label', value, <span><strong>true</strong></span>]);</code></span></pre><br />Con Universal Analytics:<br />&nbsp; <br /><pre><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><code>ga('send', 'event',    'category', 'action', 'label', 'value', <span><strong>{'nonInteraction': 1}</strong></span>)</code></span></pre><br />

@@ -1,0 +1,14 @@
+---
+layout: post
+title: Insertar elemento en mitad de un array en PHP
+date: '2013-08-03T17:45:00.000+02:00'
+author: Miguel González
+tags:
+- programación
+- php
+modified_time: '2013-08-21T15:34:02.419+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-8181194286607245580
+blogger_orig_url: http://www.miguelg.com/2013/08/insertar-elemento-en-mitad-de-un-array.html
+---
+
+Si tenemos un array y queremos insertar un elemento en una posición concreta dentro del array podemos usar la función <span style="font-family: &quot;Courier New&quot;,Courier,monospace;">array_splice</span>, otros desarrolladores han estado usando la unión de varios <span style="font-family: &quot;Courier New&quot;,Courier,monospace;">array_slice</span> con el elemento a insertar en el medio.<br /><br />Ejemplo:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">$array = array(1 =&gt; 'uno',<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 2 =&gt; 'dos',<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 3 =&gt; 'tres',<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 4 =&gt; 'cuatro');<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br />array_splice($array, 2, 0, '2.5');</span><br /><br />Cuando lo que necesitamos es insertar un array, si pasamos como cuarto parámetro el array directamente insertará un elemento por cada elemento que tenga el array, en ese caso hay que pasarlo como elemento de otro array.<br /><br /><script src="https://gist.github.com/infinit89/6294498.js"></script><br /><br />Si no metemos el cuarto parámetro como array insertará 'm', 'n' y 'o' como elementos dentro de $array en lugar de como un solo elemento de tipo array.

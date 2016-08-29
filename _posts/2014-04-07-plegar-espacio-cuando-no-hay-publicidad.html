@@ -1,0 +1,14 @@
+---
+layout: post
+title: Plegar espacio cuando no hay publicidad Google DFP
+date: '2014-04-07T16:35:00.001+02:00'
+author: Miguel González
+tags:
+- dfp
+- google
+modified_time: '2014-04-07T16:35:36.032+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-6121347146306616585
+blogger_orig_url: http://www.miguelg.com/2014/04/plegar-espacio-cuando-no-hay-publicidad.html
+---
+
+Si usas los tags que ahora da Google DFP por defecto, en un principio al definir el tamaño del div donde va a estar contenida la publicidad este tamaño se mantiene, de manera de que si no hay publicidad se queda el hueco vacio, este comportamiento no ocurría con los anteriores tags.<br /><br />Para seguir colapsando el espacio en caso de que no haya publicidad para mostrar, hay que usar la siguiente función:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">googletag.pubads().collapseEmptyDivs();</span><br /><br />Debe ser llamada antes de la función<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">googletag.enableServices();</span>

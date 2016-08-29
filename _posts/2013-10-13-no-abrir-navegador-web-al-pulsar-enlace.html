@@ -1,0 +1,15 @@
+---
+layout: post
+title: No abrir navegador web al pulsar enlace en WebView de Android
+date: '2013-10-13T23:15:00.002+02:00'
+author: Miguel González
+tags:
+- programación
+- android
+- java
+modified_time: '2013-10-13T23:15:40.672+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-3496976627157869505
+blogger_orig_url: http://www.miguelg.com/2013/10/no-abrir-navegador-web-al-pulsar-enlace.html
+---
+
+Si en una aplicación Android haces uso de alguna WebView y la URL que visitas hace alguna redirección o se pusa en algún enlace, ese enlace será capturado por el navegador y mostrado allí, de esta manera se muestra la URL en la barra del navegador. Si no quieres mostrar la barra de direcciones del navegador en una APP de android con WebView simplemente tienes que capturar las URLs para que las procese tu aplicación dentro de la WebView, para esto usamos la siguiente linea de código:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">webView.setWebViewClient(new WebViewClient());&nbsp;&nbsp;</span><br /><br />Creando el método onCreate de la actividad que contenga el webView de esta manera:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">&nbsp;&nbsp;&nbsp; public void onCreate(Bundle savedInstanceState) {<br /><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; super.onCreate(savedInstanceState);<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; setContentView(R.layout.webcontent);<br /><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; webView = (WebView) findViewById(R.id.webView);<br /><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; webView.setWebViewClient(new WebViewClient());&nbsp; <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; webView.getSettings().setJavaScriptEnabled(true);<br /><br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; webView.loadUrl("http://www.miguelg.com");<br /><br />&nbsp;&nbsp;&nbsp; }</span>

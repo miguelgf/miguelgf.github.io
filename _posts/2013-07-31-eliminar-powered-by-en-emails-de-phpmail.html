@@ -1,0 +1,15 @@
+---
+layout: post
+title: Eliminar "powered by" en emails de phpList
+date: '2013-07-31T19:21:00.000+02:00'
+author: Miguel González
+tags:
+- phplist
+- programación
+- php
+modified_time: '2013-08-03T17:45:36.797+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-2988460737507764416
+blogger_orig_url: http://www.miguelg.com/2013/07/eliminar-powered-by-en-emails-de-phpmail.html
+---
+
+Cuando se trabaja con el software gratuito <a href="http://www.phplist.com/">phpList</a> para envio de boletines de emails, por defecto va a incluir en todos los emails un texto en la parte inferior:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">powered by phpList, www.phplist.com</span><br /><br />Éste texto no se puede configurar desde la administración sino que hay que eliminarlo manualmente en el código fuente. Éste texto se encuentra en el archivo <span style="font-family: &quot;Courier New&quot;,Courier,monospace;">lists/admin/sendemaillib.php</span> y las variables que hay que buscar y reemplazar con nuestro texto personalizado o con un texto vacio son las siguietnes:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">$html["signature"]</span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">$text["signature"]</span><br /><br /><br />

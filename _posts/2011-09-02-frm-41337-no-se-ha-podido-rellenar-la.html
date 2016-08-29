@@ -1,0 +1,17 @@
+---
+layout: post
+title: 'FRM-41337: No se ha podido rellenar la lista desde el grupo de registros'
+date: '2011-09-02T00:30:00.002+02:00'
+author: Miguel González
+tags:
+- forms builder
+- ugr
+- oracle
+- pbd
+modified_time: '2011-09-02T00:31:30.659+02:00'
+thumbnail: http://2.bp.blogspot.com/-Zcub-WeszNI/TmAHakpeF_I/AAAAAAAAAOU/yfepKMKTU1I/s72-c/Captura.JPG
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-4291653089999580799
+blogger_orig_url: http://www.miguelg.com/2011/09/frm-41337-no-se-ha-podido-rellenar-la.html
+---
+
+En Oracle Forms Builder, al intentar rellenar una lista desde un grupo de registros definido previamente, puedes encontrarte con el siguiente error:<br /><b><br /></b><br /><b>FRM-41337: No se ha podido rellenar la lista desde el grupo de registros</b><br /><br />En mi caso este error aparece al hacer la llamada al código:<br /><br /><pre>PROCEDURE llena_listas (lista in VARCHAR2, grupo in VARCHAR2) IS<br />verror NUMBER :=0;<br />BEGIN<br />  verror:= Populate_Group(grupo);<br />  if verror = 0 then<br />    Clear_List(lista); /*Elimina el contenido de la lista*/<br />    Populate_List(lista, grupo);<br />  elsif verror = 1403 then <br />    null; <br />  end if;<br /><br />END;</pre><br />Este error aparece porque la consulta está devolviendo valores que no caben en la lista. En mi caso la lista era un Char de 3, mientras que la consulta del grupo de registro devolvía valores de más de 3 caracteres. Lo que hay que hacer es ajustar en las propiedades del elemento la cantidad de caracteres que admite.<br /><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-Zcub-WeszNI/TmAHakpeF_I/AAAAAAAAAOU/yfepKMKTU1I/s1600/Captura.JPG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-Zcub-WeszNI/TmAHakpeF_I/AAAAAAAAAOU/yfepKMKTU1I/s1600/Captura.JPG" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Modificar el tamaño de longitud máxima de 3 a 50 caracteres</td></tr></tbody></table><br /><br /><br /><br /><br /><br /><br />

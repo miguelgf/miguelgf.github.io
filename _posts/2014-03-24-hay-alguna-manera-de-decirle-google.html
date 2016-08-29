@@ -1,0 +1,16 @@
+---
+layout: post
+title: Hay alguna manera de decirle a Google sobre la versión móvil de nuestro sitio
+  web?
+date: '2014-03-24T20:25:00.002+01:00'
+author: Miguel González
+tags:
+- webmasters
+- responsive
+- google
+modified_time: '2014-03-24T20:25:56.263+01:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-7100359576898873846
+blogger_orig_url: http://www.miguelg.com/2014/03/hay-alguna-manera-de-decirle-google.html
+---
+
+Si tienes un sitio web que tiene versión para móviles, hay maneras de indicarle a Google que tu sitio va a verse bien en dispositivos móviles (hablamos de smartphones).<br /><br /><b>Diseño Responsive</b>: Si tu web se adapta al tamaño del dispositivo de manera que a través del CSS y el Javascript se adapta a los dispositivos móviles (smartphones y tablets) es importante dejar que Google pueda rastrear el Javascript y el CSS de&nbsp; la web y bajo ningún concepto bloquearlo a través de archivo robots.txt. De esta manera Google es capaz de detectar que esa web se ve de manera correcta en dispositivos móviles y catalogarla como tal.<br /><br /><b>Dos versiones de la web</b>: Si tienes dos URLs para el mismo contenido, una para móviles y otra para usuarios de escritorio, en el HTML de la web debes indicar su relación. En la de escritorio se debe indicar a través del rel="alternative" cual es la versión móvil y desde la versión móvil un rel="canonical" a la versión de escritorio indicando que es el mismo contenido. También sería aconsejable redireccionar los usuarios detectados que utilizan dispositivos móviles a la versión móvil de manera correcta.

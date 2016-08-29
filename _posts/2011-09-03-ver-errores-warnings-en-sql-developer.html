@@ -1,0 +1,18 @@
+---
+layout: post
+title: Ver errores (Warnings) en SQL Developer
+date: '2011-09-03T03:47:00.001+02:00'
+author: Miguel González
+tags:
+- ugr
+- oracle
+- pbd
+- procedure
+- sql developer
+- pl/sql
+modified_time: '2011-09-03T03:47:40.243+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-3162023859120626219
+blogger_orig_url: http://www.miguelg.com/2011/09/ver-errores-warnings-en-sql-developer.html
+---
+
+Al estar trabajando con Oracle SQL Developer con procedimientos, triggers y de más, es posible que al compilar algún código os muestre que se ha compliado correctament pero con advertencias, con el siguiente mensaje:<br /><br /><b>Warning: la ejecución ha terminado con advertencias</b><br /><br />Por defecto no se muestran los errores de compilación, y hay que indicarle que los muestre. Para ello simplemente hay que ejecutar la siguiente consulta:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">SHOW ERRORS;</span><br /><br />Y aparecerán los errores, en mi caso:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">PROCEDURE miProcedimiento compilado</span><br style="font-family: &quot;Courier New&quot;,Courier,monospace;" /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">Warning: la ejecución ha terminado con advertencias</span><br style="font-family: &quot;Courier New&quot;,Courier,monospace;" /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">5/3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PLS-00428: se espera una cláusula INTO en esta sentencia SELECT</span>

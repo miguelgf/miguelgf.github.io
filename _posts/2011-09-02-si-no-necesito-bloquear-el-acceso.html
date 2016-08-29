@@ -1,0 +1,17 @@
+---
+layout: post
+title: Si no necesito bloquear el acceso a rastreadores, ¿Debería crear un archivo
+  robots.txt?
+date: '2011-09-02T05:06:00.002+02:00'
+author: Miguel González
+tags:
+- robots.txt
+- seo
+- webmasters
+- google
+modified_time: '2011-09-02T05:06:41.927+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-3911893730394456077
+blogger_orig_url: http://www.miguelg.com/2011/09/si-no-necesito-bloquear-el-acceso.html
+---
+
+La respuesta rápida: Sí, incluso vacio.<br /><br /><br />No tener un archivo robots.txt puede ser un poco arriesgado, no muy arriesgado, pero sí un poquito. Esto es porque a veces cuando no tienes el archivo tu servidor retornará la página de error 404, ya sea la personalizada o estandar, y eso puede tener varios comportamientos extraños.<br /><br />Google, por suerte, es capaz de detectar eso bastante bien, por lo que puede ser sólo un 1% de riesgo. Pero es posible, por lo que puedes tener un archivo robots.txt vacio o que indique directamente:<br /><br /><div style="font-family: &quot;Courier New&quot;,Courier,monospace;">User-Agent: *<br />Disallow:</div><br />Que significa que todo el mundo tiene permiso de rastrear cualquier cosa que quiera, de esta manera estás diciendo: Sí, tienes permiso para rastrear cualquier cosa. Es bastante parecido a tenerlo vacio, Google lo tratará sintácticamente como lo mismo.<br /><br /><br />Fuente: http://www.youtube.com/watch?v=P7GY1fE5JQQ

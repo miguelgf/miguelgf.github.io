@@ -1,0 +1,14 @@
+---
+layout: post
+title: Cambiar la URL del navegador sin refrescar la página (HTML5)
+date: '2014-04-26T14:56:00.002+02:00'
+author: Miguel González
+tags:
+- webmasters
+- html5
+modified_time: '2014-04-26T14:56:57.395+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-4362795769057705014
+blogger_orig_url: http://www.miguelg.com/2014/04/cambiar-la-url-del-navegador-sin.html
+---
+
+Cuando estás programando sitios webs en los que se requiere un alto nivel de llamas Ajax, hay momentos en los que recargas la página completa o gran parte de ella mediante AJAX pero no deseas mantener las URLs con Hash para su enlace. En HTML5 hay una manera de modificar la URL del navegador, haciendo uso del pushState del historial.<br /><br /><pre>window.history.pushState(state_object, "Título", "/nueva-url");</pre><pre>&nbsp;</pre>El primer parámetro de state_object es un objeto de javascript que será enviado al evento popstate una vez cambie de estado el navegador.

@@ -1,0 +1,15 @@
+---
+layout: post
+title: 'CodeIgniter: Problema con REMOTE_ADDR al ejecutar desde CLI (Consola)'
+date: '2013-11-29T19:05:00.002+01:00'
+author: Miguel González
+tags:
+- programación
+- codeigniter
+- php
+modified_time: '2013-11-29T19:05:31.957+01:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-4671691057150154664
+blogger_orig_url: http://www.miguelg.com/2013/11/codeigniter-problema-con-remoteaddr-al.html
+---
+
+Si estás usando la versión actual a la fecha de hoy de CodeIgniter, la versión 2.1.3 y se da el caso de que cargas las sesiones en el autoload, ocurre que si ejecutas la aplicación desde línea de comandos tendrás un error de que REMOTE_ADDR no está definida, pues no existe en la variable _SERVER.<br /><br />Esto está trackeado en Github () y es solucionado en versiones posteriores. Para los que quiere solucionar del probema de forma rápida pueden cambiar en la línea 351 de system/core/Input.php lo que hay por lo siguiente:<br /><br /><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ip_address</span> <span class="o">=</span> <span class="nb">array_key_exists</span><span class="p">(</span><span class="s1">'REMOTE_ADDR'</span><span class="p">,</span><span class="nv">$_SERVER</span><span class="p">)</span> <span class="o">?</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REMOTE_ADDR'</span><span class="p">]</span> <span class="o">:</span> <span class="s1">'0.0.0.0'</span><span class="p">;</span></pre><pre><span class="p">&nbsp;</span></pre>

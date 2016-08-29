@@ -1,0 +1,16 @@
+---
+layout: post
+title: 'ORA-02391: límite de SESSIONS_PER_USER simultáneo excedido'
+date: '2011-09-02T04:23:00.004+02:00'
+author: Miguel González
+tags:
+- forms builder
+- ugr
+- oracle
+- pbd
+modified_time: '2011-09-02T04:23:56.020+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-1389290860312901290
+blogger_orig_url: http://www.miguelg.com/2011/09/ora-02391-limite-de-sessionsperuser.html
+---
+
+En Oracle Forms Builder, al crear distintas pantallas que se llaman entre sí con botones y pasándose parámetros, me encontré con el problema de que se excedía el número de conexiones simultaneas.<br /><br /><b>ORA-02391: límite de SESSIONS_PER_USER simultáneo excedido</b><br /><br />Este error ocurre porque el <i><span style="font-family: inherit;">sesslimit </span></i>de Oracle está puesto a un valor muy bajo y se excede, como indica el texto del error. Una solución es subir el límite, para lo cual necesitas privilegios de administrador de la base de datos, cosa que yo no tengo donde estoy creando la aplicación, y la otra es no crear tantas sesiones.<br /><br />La manera que estaba usando para pasar parámetros era una llamada a <b>Run_PRODUCT</b> pasándole una&nbsp; <i>ParamList</i>. De esta forma se crea una sesión nueva con cada llamada.<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">Run_PRODUCT(FORMS,'PANTALLA_DESTINO',SYNCHRONOUS, RUNTIME, FILESYSTEM, parametros ,NULL);</span><br style="font-family: &quot;Courier New&quot;,Courier,monospace;" /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">&nbsp;&nbsp; </span><br /><br />La solución al problema ha sido hacer llamadas a <b>Call_Form</b> en lugar de Run_Product.<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">Call_form('PANTALLA_DESTINO', HIDE, DO_REPLACE, NO_QUERY_ONLY, parametros); </span> <br /><br />

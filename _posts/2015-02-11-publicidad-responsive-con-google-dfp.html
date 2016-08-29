@@ -1,0 +1,15 @@
+---
+layout: post
+title: Publicidad responsive con Google DFP
+date: '2015-02-11T18:01:00.000+01:00'
+author: Miguel González
+tags:
+- webmasters
+- dfp
+- google
+modified_time: '2015-02-11T18:01:04.611+01:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-9126657308721657772
+blogger_orig_url: http://www.miguelg.com/2015/02/publicidad-responsive-con-google-dfp.html
+---
+
+Se pueden usar los códigos de Google DFP: Google Publisher Tags (GPT) para crear anuncios responsivos que se adaptan al ancho de la pantalla del visitante del sitio web. Lo que significa que la publicidad saldrá apropiada para cualquier usuario esté usando un PC de escritorio, tablet o teléfono movil.<br /><br />Para hacer esto hay que usar la API de GPT, especificando uno o más tamaños de bloque de anuncios. Cuando se hace esto se puede especificar que tipo de publicidad se desea mostrar teniendo en cuenta el tamaño de la pantalla del navegador. Por ejemplo se puede especificar que si el navegador tiene un area visible de más de 1024x768 que muestre un banner de 970x90 y si el tamaño es menor que muestre un 468x60 en el mismo sitio.<br /><br />Para conseguir esto hay que especificarle los saltos en el mapeo de banners llamando a la función sizeMapping para definir los tamaños y después a defineSizeMapping en el slot que quieras condicionar.<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">var mapping = googletag.sizeMapping(). <br /> // PAra resoluciones mayores de 1024x768<br /> addSize([1024, 768], [970, 250]).<br />  addSize([980, 690], [728, 90]). <br />  addSize([640, 480], [120, 60]). <br />   // Este último toma cualquier tamaño desde 0x0 hasta 640x480<br />   addSize([0, 0], [88, 31]).<br />  build();</span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><br />  googletag.defineSlot('/xxx/miguelg.com', [1024, 120], 'id-slot'). <br />  defineSizeMapping(mapping). <br />  setCollapseEmptyDiv(true). <br />  addService(googletag.pubads());</span>

@@ -1,0 +1,16 @@
+---
+layout: post
+title: Obtener nombre de autor de un video de youtube (Zend_GData_Youtube)
+date: '2013-05-22T12:08:00.000+02:00'
+author: Miguel González
+tags:
+- zend
+- youtube
+- programación
+- php
+modified_time: '2013-05-22T12:08:07.161+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-5919873877598960586
+blogger_orig_url: http://www.miguelg.com/2013/05/obtener-nombre-de-autor-de-un-video-de.html
+---
+
+Si en algún momento te has planteado usar la API de Zend para usar los datos de youtube a través de GData_Youtube (lo cual es muy útil para mil cosas), en caso de querer el nombre del autor del usuario y usar el metodo getAuthor vas a obtener un objeto Zend_Gdata_App_Extension_Author del que luego hay que parsear la URI y sacar el autor, una manera mucho más fácil es acceder directamente al texto del nombre de autor que viene en el propio videoEntry<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">$videoEntry-&gt;author[0]-&gt;name-&gt;text</span>

@@ -1,0 +1,15 @@
+---
+layout: post
+title: Error "No input file specified." en Code Igniter
+date: '2013-10-20T18:12:00.004+02:00'
+author: Miguel González
+tags:
+- code igniter
+- programación
+- php
+modified_time: '2013-10-20T18:12:50.934+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-4519803695821210531
+blogger_orig_url: http://www.miguelg.com/2013/10/error-no-input-file-specified-en-code.html
+---
+
+Si estás desarrollando algo con el framework de PHP Code Igniter, probablemente la ponerlo en producción en tu servidor has podido encontrarte con el problema de que aparece la pantalla en blanco con el siguiente error:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">No input file specified.&nbsp;</span><br /><br />Esto ocurre por la configuración en el .htaccess, si has introducido modificaciones para poder sobreescribir las URLs sin incluir "index.php" en la URL y has usado la configuración por defecto que aparec en la guía de usuario de code igniter.<br /><br />Para solucionar el problema debes usar el siguiente código en el .htaccess:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">RewriteEngine on<br /><br />RewriteCond %{REQUEST_FILENAME} !-f<br />RewriteCond %{REQUEST_FILENAME} !-d<br />RewriteCond $1 !^(index\.php|images|robots\.txt)<br />RewriteRule ^(.*)$ index.php<b>?</b>/$1 [<b>QSA,</b>L] </span>

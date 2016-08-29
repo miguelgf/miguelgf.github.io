@@ -1,0 +1,14 @@
+---
+layout: post
+title: Agregar callback a cualquier función en PHP
+date: '2013-04-12T18:57:00.000+02:00'
+author: Miguel González
+tags:
+- programación
+- php
+modified_time: '2013-04-12T18:57:18.140+02:00'
+blogger_id: tag:blogger.com,1999:blog-8588071933588851396.post-8131244114255888702
+blogger_orig_url: http://www.miguelg.com/2013/04/anadir-callback-cualquier-funcion-en-php.html
+---
+
+Si necesitas añadir la llamada a una función cuando otra función se ejecute, atándole una función de llamada, hay una extensión para PHP que permite hacer exactamente esto.<br /><br /><a href="http://code.google.com/p/funcall/">Funcall</a><br /><a href="http://code.google.com/p/funcall/"><br /></a>En mi caso, quiero debuggear las consultas que se realizan a MySQL en una aplicación php y saber los posibles errores que se muestren, como MySQL no hace log de los warnings de ninguna manera, usando esta extensión voy a añadir una llamada de retorno a la función 'mysql_query' para controlar si todo ha ido correcto:<br /><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">fc_add_post('mysql_query', 'mysql_query_logging');</span><br /><br />De esta manera después de ejecutar mysql_query ejecutará también la función definida por mi mysql_query_logging (donde compruebo si ha ocurrido algún error con mysql_errno)
