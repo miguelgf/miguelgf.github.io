@@ -28,5 +28,5 @@ theme: minima
 
 # Config
 timezone: Europe/Madrid
-permalink: /:year/:month/:title
+permalink: /:year/:month/:title.html
 keep_files: ['assets']
