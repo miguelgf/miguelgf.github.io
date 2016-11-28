@@ -36,3 +36,12 @@ alguna razón, podemos hacerlo a mano:
 ```
 sudo echo "extension = mongo.so" > /etc/php5/mods-available/mongo.ini
 ```
+
+Según la instalación de PHP como se haya realizado, la localizacioń del mods-available estará en la localización `/etc/php5` o en `/etc/php/{version}`,
+por ejemplo en mi sistema que tengo concurrentemente las versiones 5.5, 5.6 y 7.0, las localización para mongo.ini sería en `/etc/php/5.6/mods-available`.
+
+Para comprobar que se ha intalado correctamente inspeccionamos la configuración de PHP para ver que existen los registros de configuración de mongo
+
+```
+php -i | grep mongo
+```
