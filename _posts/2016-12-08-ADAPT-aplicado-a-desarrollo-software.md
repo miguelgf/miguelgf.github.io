@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Metodologia ADAPT aplicada al desarrollo del software'
-date: '2016-08-12'
+date: '2016-12-08'
 author: Miguel González
 tags:
 - scrum
