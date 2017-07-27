@@ -8,7 +8,7 @@ tags:
 - phpbench
 ---
 
-Por curiosidad, hice un pequeño test usando [PHPBench]() para comparar el uso de un ArrayObject cuando debe ser modificado por otra función
+Por curiosidad, hice un pequeño test usando [PHPBench](https://github.com/phpbench/phpbench) para comparar el uso de un ArrayObject cuando debe ser modificado por otra función
 contra pasar el array original por valor, modificarlo y devolverlo. Aquí están los resultados:
 
 ## Código PHP del test:
