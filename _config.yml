@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Miguel González
-email: infinit89@gmail.com
+email: miguelgzflores@gmail.com
 description: > 
     Snippets de código, pequeños tips y auto-reminders de un programador.
 baseurl: "" # the subpath of your site, e.g. /blog
