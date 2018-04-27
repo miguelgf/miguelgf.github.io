@@ -2,7 +2,7 @@
 layout: post
 title: 'Libro: El libro negro del programador'
 date: '2016-12-31'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - libros
 - programación

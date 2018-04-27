@@ -2,7 +2,7 @@
 layout: post
 title: 'Usar Cygwin como terminal con PHPStorm en Windows'
 date: '2016-11-27'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - programación
 - tools

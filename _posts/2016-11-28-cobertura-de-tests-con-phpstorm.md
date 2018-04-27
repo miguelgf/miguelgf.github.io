@@ -2,7 +2,7 @@
 layout: post
 title: 'Cobertura de código de los tests en PHPStorm'
 date: '2016-11-28'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - phpunit

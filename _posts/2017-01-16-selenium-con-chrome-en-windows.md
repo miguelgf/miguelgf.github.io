@@ -2,7 +2,7 @@
 layout: post
 title: 'Arrancar Selenium server con Chrome Webdriver en Windows'
 date: '2017-01-16'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - selenium
 - testing

@@ -2,7 +2,7 @@
 layout: post
 title: 'Testing React Native Apps con Jest'
 date: '2017-11-09'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - react native
 - javascript

@@ -2,7 +2,7 @@
 layout: post
 title: 'Libro: The cleaner coder'
 date: '2017-04-01'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - libros
 - programacion

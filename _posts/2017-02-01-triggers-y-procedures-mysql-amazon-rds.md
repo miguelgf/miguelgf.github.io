@@ -2,7 +2,7 @@
 layout: post
 title: 'Usar triggers y procedures en MySQL con Amazon RDS'
 date: '2017-02-01'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - amazon
 - rds

@@ -2,7 +2,7 @@
 layout: post
 title: 'Pruebas de mutación en PHP'
 date: '2017-12-08'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - testing

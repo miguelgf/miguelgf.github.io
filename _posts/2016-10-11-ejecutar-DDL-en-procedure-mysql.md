@@ -2,7 +2,7 @@
 layout: post
 title: Ejecutar comandos DDL de MySQL en un procedimiento almacenado
 date: '2016-10-11'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - mysql
 - programacion

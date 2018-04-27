@@ -2,7 +2,7 @@
 layout: post
 title: 'Libro: Clean Code'
 date: '2016-11-26'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - libros
 - programación

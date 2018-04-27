@@ -2,7 +2,7 @@
 layout: post
 title: 'Instalar extensión SQLite en PHP 5.6 en Ubuntu'
 date: '2016-12-12'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - php5.6

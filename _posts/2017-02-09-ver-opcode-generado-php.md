@@ -2,7 +2,7 @@
 layout: post
 title: 'Ver OPCode generado por un archivo PHP'
 date: '2017-02-09'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - zend

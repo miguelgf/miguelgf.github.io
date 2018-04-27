@@ -2,7 +2,7 @@
 layout: post
 title: 'PHPBench: Comparativa ArrayObject vs Array por valor en PHP'
 date: '2017-04-21'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - phpbench

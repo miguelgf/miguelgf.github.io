@@ -2,7 +2,7 @@
 layout: post
 title: Añadir cambios al commit anterior en git
 date: '2016-09-30'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - git
 ---

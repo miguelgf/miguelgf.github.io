@@ -2,7 +2,7 @@
 layout: post
 title: 'Actualizar última versión rocket chat con Docker'
 date: '2016-12-17'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - docker
 - rocket chat

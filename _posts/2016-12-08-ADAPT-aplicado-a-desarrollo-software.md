@@ -2,7 +2,7 @@
 layout: post
 title: 'Metodologia ADAPT aplicada al desarrollo del software'
 date: '2016-12-08'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - scrum
 - equipos

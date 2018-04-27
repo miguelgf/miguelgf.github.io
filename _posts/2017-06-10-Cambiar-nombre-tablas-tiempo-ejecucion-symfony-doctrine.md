@@ -2,7 +2,7 @@
 layout: post
 title: 'Cambiar nombre de las tablas en tiempo de ejecución con Symfony/Doctrine'
 date: '2017-06-10'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - symfony

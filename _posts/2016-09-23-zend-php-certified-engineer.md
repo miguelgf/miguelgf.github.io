@@ -2,7 +2,7 @@
 layout: post
 title: Zend PHP Certified Engineer
 date: '2016-09-23'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - zend

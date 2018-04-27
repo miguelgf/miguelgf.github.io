@@ -2,7 +2,7 @@
 layout: post
 title: 'Libro: Extreme programming explained'
 date: '2017-05-30'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - libros
 ---

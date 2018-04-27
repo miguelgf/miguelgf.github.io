@@ -2,7 +2,7 @@
 layout: post
 title: 'Pasar argumentos de línea de comandos en Xcode'
 date: '2017-09-25'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - xcode
 - ios

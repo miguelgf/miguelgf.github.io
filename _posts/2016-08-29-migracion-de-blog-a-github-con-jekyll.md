@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Migración del blog a Github con Jekyll'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - jekyll
 - blog

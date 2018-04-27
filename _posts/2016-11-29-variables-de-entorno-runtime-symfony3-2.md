@@ -2,7 +2,7 @@
 layout: post
 title: 'Variables de entorno en tiempo de ejecución en Symfony 3.2'
 date: '2016-11-29'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - symfony3

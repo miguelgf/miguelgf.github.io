@@ -2,7 +2,7 @@
 layout: post
 title: 'Libro: Scrum and XP from the Trenches'
 date: '2017-06-27'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - libros
 ---

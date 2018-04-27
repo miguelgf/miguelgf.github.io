@@ -2,7 +2,7 @@
 layout: post
 title: 'Asegurando estándares de código (PSR) en el desarrollo'
 date: '2017-02-16'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - PSR

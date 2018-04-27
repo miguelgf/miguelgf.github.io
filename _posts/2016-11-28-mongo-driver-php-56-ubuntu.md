@@ -2,7 +2,7 @@
 layout: post
 title: 'Instalar PHP Driver para Mongo en PHP 5.6'
 date: '2016-11-28'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - mongo

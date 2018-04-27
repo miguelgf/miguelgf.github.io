@@ -2,7 +2,7 @@
 layout: post
 title: 'Configurar Name Servers al migrar un dominio a Amazon con Route 53'
 date: '2017-03-11'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - amazon
 - aws

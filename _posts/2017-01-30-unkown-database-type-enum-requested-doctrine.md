@@ -2,7 +2,7 @@
 layout: post
 title: 'Error "Unknown database type enum requested" con doctrine import'
 date: '2017-01-30'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - php
 - doctrine

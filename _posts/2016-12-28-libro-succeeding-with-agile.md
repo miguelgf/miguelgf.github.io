@@ -2,7 +2,7 @@
 layout: post
 title: 'Libro: Succeeding with Agile: Software Development Using Scrum'
 date: '2016-12-28'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - libros
 - scrum

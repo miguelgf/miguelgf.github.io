@@ -2,7 +2,7 @@
 layout: post
 title: 'Nuevo usuario de twitter'
 date: '2017-02-11'
-author: Miguel González
+author: Miguel G. Flores
 tags:
 - personal
 - twitter
