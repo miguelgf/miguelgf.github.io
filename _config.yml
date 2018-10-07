@@ -32,7 +32,7 @@ timezone: Europe/Madrid
 permalink: /:year/:month/:title.html
 keep_files: ['assets']
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 # Pagination
 paginate: 15
