@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Libro: The nature of software development'
-date: '2017-01-07'
+date: '2019-01-07'
 author: Miguel G. Flores
 tags:
 - agile
