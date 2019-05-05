@@ -23,14 +23,14 @@ class ACL:
 	    if not user.is_superuser():
 	        if not user.is_blocked():
 	            for allowed_permission in user.permissions:
-					if permission == allowed_permission:
-							return True
+			if permission == allowed_permission:
+				return True
 	        else:
 	            raise Exception('User is blocked')
-		else
+	    else:
 			return True
 
-		return False
+	    return False
 ```
 
 En este código tenemos (partiendo de la definición de la función) 5 niveles de identación, lo cual dificulta la lecutura y aumenta la complejidad cognitiva.
@@ -40,35 +40,35 @@ Lo primero que vamos a intentar es eliminar los `else`, ya que en general nunca 
 ```python
 class ACL:
 	def can_access(user: User, permission: str) -> bool:
-    if user.is_superuser():
-		return True
+    	if user.is_superuser():
+			return True
 
-    if not user.is_blocked():
-        for allowed_permission in user.permissions:
-			if permission == allowed_permission:
-				return True
-    else:
-        raise Exception('User is blocked')
+    	if not user.is_blocked():
+        	for allowed_permission in user.permissions:
+				if permission == allowed_permission:
+					return True
+    	else:
+        	raise Exception('User is blocked')
 
-	return False
+		return False
 ```
 
-Primer else eliminado, se comprueba si es superusuario y se devuelve True en ese caso. En segundo lugar vemos que los usuarios bloqueados están restringidos también, en este caso con una excepción en caso de que estén bloqueados, hacemos el mismo ejercicio.
+Primer `else` eliminado, se comprueba si es superusuario y se devuelve True en ese caso. En segundo lugar vemos que los usuarios bloqueados están restringidos también, en este caso con una excepción en caso de que estén bloqueados, hacemos el mismo ejercicio.
 
 ```python
 class ACL:
 	def can_access(user: User, permission: str) -> bool:
-    if user.is_superuser():
-		return True
-
-    if user.is_blocked():
-		raise Exception('User is blocked')
-
-    for allowed_permission in user.permissions:
-		if permission == allowed_permission:
+    	if user.is_superuser():
 			return True
 
-	return False
+    	if user.is_blocked():
+			raise Exception('User is blocked')
+
+    	for allowed_permission in user.permissions:
+			if permission == allowed_permission:
+				return True
+
+		return False
 ```
 
 Hemos vuelto a bajar el nivel de identación, además de dejar claro que el último bloque se va a ejecutar únicamente cuando las dos condiciones previas se cumplan. En este caso concreto, al estar levantar una excepción, podemos encapsularla dentro de un método privado que le de semántica al código, en caso de que la comprobación fuese más compleja ayudaría mucho.
@@ -76,18 +76,18 @@ Hemos vuelto a bajar el nivel de identación, además de dejar claro que el últ
 ```python
 class ACL:
 	def can_access(user: User, permission: str) -> bool:
-    if user.is_superuser():
-		return True
-
-    self.__check_user_is_blocked(user);
-
-    for allowed_permission in user.permissions:
-		if permission == allowed_permission:
+    	if user.is_superuser():
 			return True
 
-	return False
+    	self.__check_user_is_blocked(user);
 
-  def __check_user_is_blocked(user: User) -> None:
+    	for allowed_permission in user.permissions:
+			if permission == allowed_permission:
+				return True
+
+		return False
+
+  	def __check_user_is_blocked(user: User) -> None:
 		if user.is_blocked():
 			raise Exception('User is blocked')
 ```
