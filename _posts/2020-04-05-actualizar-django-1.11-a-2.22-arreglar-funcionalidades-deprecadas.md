@@ -12,7 +12,7 @@ tags:
 
 En cada versión de Django (o de cualquier otro framework o librería) una serie de funcionalidades se van deprecando y otras van siendo eliminadas. Normalmente una funcionalidad va a ser deprecada (y no se aconseja su uso) en una o varias versiones antes de ser eliminada por completo.
 
-Por ejemplo, en [Django 1.11 se deprecaron distintas funcionalidades](https://docs.djangoproject.com/en/3.0/releases/1.11/#features-deprecated-in-1-11) que luego fueron (eliminadadas en Django 2.1)[https://docs.djangoproject.com/en/3.0/releases/2.1/#features-removed-in-2-1]
+Por ejemplo, en [Django 1.11 se deprecaron distintas funcionalidades](https://docs.djangoproject.com/en/3.0/releases/1.11/#features-deprecated-in-1-11) que luego fueron [eliminadadas en Django 2.1](https://docs.djangoproject.com/en/3.0/releases/2.1/#features-removed-in-2-1)
 
 #### Ver notificaciones (warnings) de uso de estas funcionalidades
 
@@ -20,7 +20,7 @@ En la lista de release notes de Django está muy detallado que es lo que va a se
 
 Sin embargo podemos usar el logger de python para mostrar todo este tipo de notificaciones. Hay que añadir los flags `-Wd` al ejecutar `python`
 
-##### Ejecutar python en con logging debug en tests
+#### Ejecutar python en con logging debug en tests
 
 Lo primero y más inmediato sería ejecutar nuestra suite de test con estos flags
 
@@ -32,7 +32,7 @@ Esto activará una cantidad de logs importante, todo esto avisando de las funcio
 
 En este caso es un archivo de migraciones de Django que tendríamos que actualizar si queremos que siga funcionando en Django 2
 
-##### Ejecutar python en con logging debug en producción
+#### Ejecutar python en con logging debug en producción
 
 Una vez todos nuestros tests estén limpios de avisos, que estemos ejecutando nuestra aplicación también en local con estos flags activados y no veamos nuestra salida, podemos activarlo en una de nuestras máquinas de producción, si tenemos varias balanceadas con ponerlo en una de ellas sería suficiente, para poder ver en los logs de producción si realmente se está usando algo que no hayamos visto en local o en la suite de test.
 
