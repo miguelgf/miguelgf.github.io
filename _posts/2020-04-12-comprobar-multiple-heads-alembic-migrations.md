@@ -22,7 +22,7 @@ ERROR [root] Error: Multiple head revisions are present for given argument 'head
 
 Al ejecutar un `flask db upgrade` (o `alembic upgrade` si se usa Alembic directamente).
 
-### Cuál es el problema?
+### ¿Cuál es el problema?
 Ocurre que cuando dos ramas simultaneamente parten de la misma base, y ambas ejecutan crean una migración, en el momento que una de la dos se mezcle, la segunda va a devolver este error cuando intentemos desplegar nuestra aplicación.
 
 ```
@@ -41,21 +41,20 @@ A -> B -> C -> D
 
 En este momento, en master tendremos dos migraciones que no son secuenciales, por lo que tendremos dos cabezas. 
 
-### Qué debemos hacer cuando ocurre?
+### ¿Qué debemos hacer cuando ocurre?
 Para solucionar este problema, debemos clear una migración de mezcla. 
 
 ```
-flask db merge heads
+$> flask db merge heads
 
 # Si se usa directamente Alembic
-alembic merge heads
+$> alembic merge heads
 ```
 
 Esto va a crear una tercera migración, con un punto de mezcla.
 
-### Como evitar que ocurra
+### Cómo evitar que ocurra
 La mejor solución para este problema es la prevención. Una vez que esto ocurre y tenemos un deploy fallido está bloqueándonos la salida a producción y tenemos que hacer una pull requests extra para solucionarlo.
-
 
 Si tenemos un flujo sano de pull request e integración continua, donde parte de esta suite son test de integración que ejecutan las migraciones para poner una base de datos en el estado deseado, esto se va a comprobar automáticamente.
 
