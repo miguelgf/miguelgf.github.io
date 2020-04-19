@@ -92,4 +92,4 @@ class ACL:
 			raise Exception('User is blocked')
 ```
 
-Esta es una manera simple y efectiva de simplificar nuestro código, que sea más legible y fácil de entender para cualquier persona que lo lea. Añade más semántica y reduce la carga cognitiva de entener el código.
+Esta es una manera simple y efectiva de simplificar nuestro código, que sea más legible y fácil de entender para cualquier persona que lo lea. Añade más semántica y reduce la carga cognitiva de entender el código.
