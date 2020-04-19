@@ -8,7 +8,7 @@ tags:
 - agile
 ---
 
-![Representación real de un backlog]({{ site.url }}/assets/images/2020-04-19/representacion-backlog.png | width=100%)
+![Representación real de un backlog]({{ site.url }}/assets/images/2020-04-19/representacion-backlog.png)
 
 Todo producto debe tener un roadmap a largo plazo, y de este roadmap a largo plazo, una parte más inmediata va a estar definida y preparada para ser desarrollada. Esta parte más cercana tendrán una cola de tareas dónde se van a ir guardando las nuevas funcionalidades que va a tener tu sistema. Un Backlog se define como una pila de tareas a realizar ordenadas por prioridad.
 

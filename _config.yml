@@ -18,7 +18,7 @@ email: miguelgzflores@gmail.com
 description: > 
     Snippets de código, pequeños tips y auto-reminders de un programador.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.miguelg.com" # the base hostname & protocol for your site
+url: "https://www.miguelg.com" # the base hostname & protocol for your site
 twitter_username: miguelgflores
 github_username:  miguelgf
 google_analytics: UA-119985-27
