@@ -71,5 +71,5 @@ jobs:
     steps:
     - uses: actions/labeler@v2
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        repo-token: {% raw %}"${{ secrets.GITHUB_TOKEN }}"{% endraw %}
 ```
