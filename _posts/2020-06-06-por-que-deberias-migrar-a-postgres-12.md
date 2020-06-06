@@ -9,7 +9,7 @@ tags:
 - db
 ---
 
-![PostgreSQL 12]]({{ site.url }}/assets/images/2020-06-06/novedades-postgresql-12.png)
+![PostgreSQL 12]({{ site.url }}/assets/images/2020-06-06/novedades-postgresql-12.png)
 
 
 Recientemente AWS anunció que [Amazon RDS es compatible con PostgreSQL 12](https://aws.amazon.com/es/about-aws/whats-new/2020/03/amazon-rds-now-supports-postgresql-12/) aunque ya
