@@ -7,7 +7,7 @@ tags:
 - libros
 ---
 
-![Recomendaciones libros 2020]({{ site.url }}/assets/images/2020-02-06/libros_2020.png)
+![Recomendaciones libros 2020]({{ site.url }}/assets/images/2021-02-06/libros_2020.png)
 
 A lo largo de mi vida he tenido distintos altibajos a la hora de leer mucho o pasar largas temporadas sin leer ni un
 solo libro. 2020 ha sido un año donde he recuperado esa costumbre (algo bueno tendría que tener la pandemia) y donde
